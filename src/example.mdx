@@ -1,0 +1,67 @@
+import { useState } from 'react'
+
+export const Counter = ({ initialCount = 0 }) => {
+  const [count, setCount] = useState(initialCount)
+
+  return (
+    <div style={{ 
+      fontFamily: 'Arial, sans-serif',
+      maxWidth: '300px',
+      margin: '20px auto',
+      padding: '20px',
+      border: '2px solid #ccc',
+      borderRadius: '10px',
+      textAlign: 'center'
+    }}>
+      <h2>Counter: {count}</h2>
+      <div style={{ display: 'flex', justifyContent: 'center', gap: '10px', marginTop: '20px' }}>
+        <button onClick={() => setCount(c => c - 1)} style={buttonStyle}>-</button>
+        <button onClick={() => setCount(initialCount)} style={buttonStyle}>Reset</button>
+        <button onClick={() => setCount(c => c + 1)} style={buttonStyle}>+</button>
+      </div>
+    </div>
+  )
+}
+
+export const buttonStyle = {
+  padding: '10px 20px',
+  fontSize: '16px',
+  cursor: 'pointer',
+  backgroundColor: '#4CAF50',
+  color: 'white',
+  border: 'none',
+  borderRadius: '5px',
+  transition: 'background-color 0.3s'
+}
+
+# Welcome to My Dynamic MDX File
+
+This is a paragraph in Markdown, demonstrating how we can mix markdown with interactive React components.
+
+Here's our new Counter component:
+
+<Counter initialCount={5} />
+
+Here's a list of what we've accomplished:
+- Created a fully interactive Counter component
+- Embedded the component directly in our MDX
+- Used inline styles to avoid external CSS dependencies
+- Leveraged React hooks for state management
+
+## How It Works
+
+1. The Counter component is defined at the top of this MDX file.
+2. It uses React's `useState` hook to manage the count state.
+3. The component is then used within the MDX content.
+4. When rendered, it provides a fully interactive counting experience.
+
+Try clicking the buttons above to see it in action!
+
+## Why This is Cool
+
+This demonstrates the power of MDX:
+1. **Interactivity in Documentation**: We can now have fully interactive components right in our documentation or content.
+2. **Live Code Examples**: For tutorials or guides, we can provide live, editable examples.
+3. **Dynamic Content**: Our content can now respond to user input, making it more engaging.
+
+Feel free to fork this and create your own interactive MDX files!
